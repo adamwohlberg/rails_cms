@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   # get 'demo/index'
 
+  # root :to => "demo#index"
+  root "demo#index"
+
   # match "demo/index",
   #   :to => "demo#index",
   #   :via => :get
-
-  match ':controller(/:action(:/id(.:format)))',
-    :via => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -62,4 +62,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match ':controller(/:action(:/id(.:format)))',
+    :via => :get
 end
