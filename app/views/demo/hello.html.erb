@@ -16,3 +16,11 @@
 <% @array.each do |n| %>
 	<%= n %><br />
 <% end %>
+
+<h5>ID: <%= params[:id] %></h5>
+<h5>ID: <%= @id %></h5>
+<h5>Page: <%= @page %></h5>
+<h5>Page: <%= params[:page] %></h5>
+<h5>Page: <%= params["page"] %></h5>
+<h5>Page: <%= params["page"].next %></h5>
+<h5>Page: <%= params["page"].to_i + 1 %></h5>
