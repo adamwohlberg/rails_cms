@@ -7,14 +7,18 @@ class SubjectsController < ApplicationController
   end
 
   def show
+    @subject = Subject.find(params[:id])
   end
 
   def new
+    @subject = Subject.new({ :name => "Barack Obama" })
   end
 
   def edit
+
   end
 
   def delete
+
   end
 end
