@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # root :to => "demo#index"
   root "demo#index"
 
+  # match "subjects/create",
+  #   :to => "subjects#create",
+  #   :via => :post
+
   # match "demo/index",
   #   :to => "demo#index",
   #   :via => :get
@@ -65,5 +69,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   match ':controller(/:action(:/id(.:format)))',
-    :via => :get
+    :via => [:get,:post]
 end
