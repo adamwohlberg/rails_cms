@@ -19,4 +19,8 @@ class DemoController < ApplicationController
   	redirect_to('https://www.whitehouse.gov/')
   end
 
+  def text_helpers
+
+  end
+
 end
