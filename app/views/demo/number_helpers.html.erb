@@ -1,5 +1,20 @@
 <%= number_to_currency(500.69) %>
 
 <br />
-
 <%= number_to_currency(500.69, :precision => 0, :unit => "kr", :format => "%n %u") %>
+
+<br />
+<%= number_to_percentage(34.5, :precision => 1) %>
+
+<br />
+<%= number_with_precision(45.86558566, :precision => 4) %>
+
+<br />
+<%= number_to_human(389549885498384905890349003909880954083048, :precision => 1)%>
+
+<br /> 
+<%= number_to_human_size(100000000000000) %>
+
+<br />
+<%= number_to_phone(3238415555) %>
+
