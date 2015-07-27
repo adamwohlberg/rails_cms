@@ -20,7 +20,6 @@ class DemoController < ApplicationController
   end
 
   def text_helpers
-
   end
 
 end

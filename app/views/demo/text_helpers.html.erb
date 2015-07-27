@@ -1,3 +1,5 @@
+<%= pluralize(1,'octopus') %>
+
 <%
 text = "This is some long sample text. It includes line breaks\n and double-line breaks.\n\n It rambles on and on and on.\n\n Until we get to this last line."
 %>
@@ -28,6 +30,17 @@ text = "This is some long sample text. It includes line breaks\n and double-line
 <%= highlight(text, ['sample', 'rambles'],
 :highlighter => '<em>\1</em>') %>
 <hr />
+<%= highlight(text, ['sample', 'rambles']) %>
+<hr />
+
+<h2>cycle</h2>
+<% 15.times do %>
+  <%= cycle('red', 'green', 'blue') %><br />
+<% end %>
+
+<hr />
+<%= text %>
+<hr />
 
 <h2>pluralize</h2>
 <%= "student".pluralize %><br />
@@ -42,9 +55,6 @@ text = "This is some long sample text. It includes line breaks\n and double-line
 <% end %>
 <hr />
 
-<h2>cycle</h2>
-<% 5.times do %>
-  <%= cycle('red', 'green', 'blue') %><br />
-<% end %>
+
 
 
