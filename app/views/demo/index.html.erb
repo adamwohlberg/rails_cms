@@ -6,3 +6,10 @@
 <a href="http://www.whitehouse.gov">white house</a><br />
 <%= link_to('white house', 'http://www.whitehouse.gov') %><br />
 <%= link_to('Hello with parameters', { :action => 'hello', :page => 5, :id => 20 }) %><br />
+<br />
+<%# name = "Kevin" %>
+<% name = "Sorry!'); alert('I hacked you!" %>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('#{escape_javascript(name)}'); return true;") %>
+
+<%= javascript_tag("jsRoar('#{escape_javascript(name)}');") %>
