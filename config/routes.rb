@@ -1,13 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'access/index'
-
-  get 'access/login'
-
-  # get 'demo/index'
-
-  # root :to => "demo#index"
   root "demo#index"
+  
+  get 'admin', :to => "access#index"
 
   # match "subjects/create",
   #   :to => "subjects#create",
