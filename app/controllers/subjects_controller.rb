@@ -61,7 +61,6 @@ class SubjectsController < ApplicationController
     # subject.destroy <= you can daisy chain this to the end of the line above with .destroy
     flash[:notice] = "Subject '#{subject.name}' destroyed successfully."
     redirect_to(:action => 'index')
-
   end
 
   private

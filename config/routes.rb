@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  
+
   root "demo#index"
   
   get 'admin', :to => "access#index"
-
   # match "subjects/create",
   #   :to => "subjects#create",
   #   :via => :post

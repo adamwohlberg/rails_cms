@@ -9,6 +9,8 @@ class AdminUser < ActiveRecord::Base
 	has_many :section_edits
 	has_many :sections, :through => :section_edits
 
+  scope :sorted, lambda { order("last_name ASC, first_name ASC") }
+
   EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   FORBIDDEN_USERNAMES = ['shit','fuck','ass']
 
@@ -50,5 +52,9 @@ class AdminUser < ActiveRecord::Base
   #     errors[:base] << "No new users on Saturdays."
   #   end
   # end
+
+  def name
+    first_name + ' ' + last_name
+  end
 
 end
