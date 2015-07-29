@@ -3,6 +3,7 @@ class Section < ActiveRecord::Base
 	has_many :section_edits
 	has_many :editors, :through => :section_edits, :class_name => "AdminUser"
 	belongs_to :page
+  acts_as_list :scope => :subject
 
   CONTENT_TYPES = ['text', 'HTML']
 

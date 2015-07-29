@@ -1,4 +1,4 @@
-class AdminUserController < ApplicationController
+class AdminUsersController < ApplicationController
 
   layout 'admin'
 
